@@ -23,6 +23,9 @@ public:
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Automobil audi;
+    audi.marca = "Audi";//atribut din clasa vehicul
+    audi.porneste();//metoda din clasa vehicul
+    audi.claxoneaza();//metoda din clasa automobil
 }
 
