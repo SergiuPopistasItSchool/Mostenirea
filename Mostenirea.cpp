@@ -3,6 +3,14 @@
 class Vehicul
 {
 public:
+    Vehicul()
+    {
+        std::cout << "Un vehicul a fost creat\n";
+    }
+    ~Vehicul()
+    {
+        std::cout << "Un vechiul a fost distrus\n";
+    }
     std::string marca;
     void porneste()
     {
@@ -14,6 +22,14 @@ public:
 class Automobil : public Vehicul
 {
 public:
+    Automobil()
+    {
+        std::cout << "Un automobil a fost creat\n";
+    }
+    ~Automobil()
+    {
+        std::cout << "Un automobil a fost distrus\n";
+    }
     void claxoneaza()
     {
         std::cout << "Beep Beep!" << std::endl;
