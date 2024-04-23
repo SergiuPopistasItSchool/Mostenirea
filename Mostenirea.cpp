@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <string>
 class Vehicul
 {
@@ -47,7 +47,19 @@ public:
         std::cout << "numarul de roti este " << getNumarRoti() << std::endl;
     }
 };
+class Motocileta : public Vehicul
+{
+public:
+    Motocileta() : Vehicul(2)
+    {
+        std::cout << "O motocileta a fost creata\n";
+    };
+    void lineSpliting()
+    {
+        std::cout << "Line Spliting\n";
+    }
 
+};
 
 int main()
 {
@@ -59,5 +71,22 @@ int main()
     //audi.numar_roti // error este protected
     //Vehicul v;
     //v.numar_roti // error, este protected
+    Motocileta Honda;
+    Honda.marca = "Honda";
+    Honda.porneste();
+    Honda.lineSpliting();
 }
+
+/*
+Ierarhia Animalelor
+Scop: Implementează o clasă de bază Animal 
+și clase derivate pentru diferite tipuri de animale, cum ar fi Caine și Pisica.
+
+Descriere:
+
+Clasa Animal va avea membri pentru nume și vârstă, și metode pentru setarea și afișarea acestora.
+Clasa Caine și clasa Pisica vor moșteni clasa Animal și vor adăuga comportamente specifice, cum ar fi latra() 
+pentru Caine și toarce() pentru Pisica.
+
+*/
 
