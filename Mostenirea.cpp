@@ -3,7 +3,7 @@
 class Vehicul
 {
 public:
-    Vehicul()
+    Vehicul(int nr_roti): numar_roti(nr_roti)
     {
         std::cout << "Un vehicul a fost creat\n";
     }
@@ -16,7 +16,7 @@ public:
     {
         std::cout << "Vehicolul a pornit " << std::endl;
     }
-protected:
+private:
     int numar_roti;
 };
 
@@ -24,10 +24,9 @@ protected:
 class Automobil : public Vehicul
 {
 public:
-    Automobil()
+    Automobil() : Vehicul(4)
     {
-        std::cout << "Un automobil a fost creat\n";
-        numar_roti = 4;
+        std::cout << "Un automobil a fost creat\n";     
     }
     ~Automobil()
     {
