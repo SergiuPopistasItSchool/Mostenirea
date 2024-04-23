@@ -18,6 +18,12 @@ public:
     }
 private:
     int numar_roti;
+
+protected:
+    int getNumarRoti()
+    {
+        return numar_roti;
+    }
 };
 
 // class Derivata : tip_mostenire clasa_de_baza
@@ -38,7 +44,7 @@ public:
     }
     void printNumarRoti()
     {
-        std::cout << "numarul de roti este " << numar_roti << std::endl;
+        std::cout << "numarul de roti este " << getNumarRoti() << std::endl;
     }
 };
 
@@ -49,6 +55,7 @@ int main()
     audi.marca = "Audi";//atribut din clasa vehicul
     audi.porneste();//metoda din clasa vehicul
     audi.claxoneaza();//metoda din clasa automobil
+    audi.printNumarRoti();
     //audi.numar_roti // error este protected
     //Vehicul v;
     //v.numar_roti // error, este protected
