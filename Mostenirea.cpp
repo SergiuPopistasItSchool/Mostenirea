@@ -110,18 +110,18 @@ public:
 int main()
 {
     D d;
-    //Automobil audi;
-    //audi.marca = "Audi";//atribut din clasa vehicul
-    //audi.porneste();//metoda din clasa vehicul
-    //audi.claxoneaza();//metoda din clasa automobil
-    //audi.printNumarRoti();
-    ////audi.numar_roti // error este protected
-    ////Vehicul v;
-    ////v.numar_roti // error, este protected
-    //Motocileta Honda;
-    //Honda.marca = "Honda";
-    //Honda.porneste();
-    //Honda.lineSpliting();
+    Automobil audi;
+    audi.marca = "Audi";//atribut din clasa vehicul
+    audi.porneste();//metoda din clasa vehicul
+    audi.claxoneaza();//metoda din clasa automobil
+    audi.printNumarRoti();
+    //audi.numar_roti // error este protected
+    //Vehicul v;
+    //v.numar_roti // error, este protected
+    Motocileta Honda;
+    Honda.marca = "Honda";
+    Honda.porneste();
+    Honda.lineSpliting();
 }
 
 /*
