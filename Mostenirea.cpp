@@ -61,20 +61,67 @@ public:
 
 };
 
+class A
+{
+public: A() {
+    std::cout << "Construcor A\n";
+        };
+      ~A() {
+          std::cout << "Destructor A\n";
+      };
+};
+
+class B : virtual public A
+{
+public: B() { std::cout << "Construcor B\n"; };
+      ~B() {
+          std::cout << "Destructor B\n";
+      };
+};
+
+class C : virtual public A
+{
+public:
+    C() {
+        std::cout << "Construcor C\n";
+    };
+    ~C() {
+        std::cout << "Destructor C\n";
+    };
+
+};
+
+class D : public B , C
+{
+public:
+    D()
+    {
+        std::cout << "Construcor D\n";
+    };
+    ~D()
+    {
+        std::cout << "Destructor D\n";
+    };
+
+};
+
+
+
 int main()
 {
-    Automobil audi;
-    audi.marca = "Audi";//atribut din clasa vehicul
-    audi.porneste();//metoda din clasa vehicul
-    audi.claxoneaza();//metoda din clasa automobil
-    audi.printNumarRoti();
-    //audi.numar_roti // error este protected
-    //Vehicul v;
-    //v.numar_roti // error, este protected
-    Motocileta Honda;
-    Honda.marca = "Honda";
-    Honda.porneste();
-    Honda.lineSpliting();
+    D d;
+    //Automobil audi;
+    //audi.marca = "Audi";//atribut din clasa vehicul
+    //audi.porneste();//metoda din clasa vehicul
+    //audi.claxoneaza();//metoda din clasa automobil
+    //audi.printNumarRoti();
+    ////audi.numar_roti // error este protected
+    ////Vehicul v;
+    ////v.numar_roti // error, este protected
+    //Motocileta Honda;
+    //Honda.marca = "Honda";
+    //Honda.porneste();
+    //Honda.lineSpliting();
 }
 
 /*
